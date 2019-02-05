@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <?php echo loadCss("template/css/") ?>
-<!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">-->
-<!--    <link rel="stylesheet" href="template/css/index.css">-->
+    <!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="template/css/index.css">-->
     <title>Blog posts</title>
 </head>
 <body>
 
-<?php include "template/partials/navbar.php"; ?>
+<?php include "template/partials/navbarAdmin.php"; ?>
 
 <div class="container">
 
@@ -28,8 +28,8 @@
 
         <?php include "template/partials/tags.php"; ?>
 
-        </div>
     </div>
+</div>
 
 <?php include "template/partials/pagination.php"; ?>
 

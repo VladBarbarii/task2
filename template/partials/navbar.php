@@ -15,9 +15,59 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-inline">
+                <input type="text" class="form-control mx-3" data-toggle="modal" data-target="modal" name="username" placeholder="Username">
+                <input type="text" class="form-control" name="password" placeholder="Password">
+                <button type="submit" class="btn btn-default mx-3">Sign In</button>
+                <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#modalRegisterForm">Register</a>
+            </div>
         </form>
+        <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form method="POST" action=../../config/database.php>
+                        <div class="modal-body mx-3">
+                            <div class="md-form mb-5">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-name">Your name</label>
+                            </div>
+                            <div class="md-form mb-5">
+                                <i class="fas fa-envelope prefix grey-text"></i>
+                                <input type="email" id="orangeForm-email" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+                            </div>
+
+                            <div class="md-form mb-4">
+                                <i class="fas fa-lock prefix grey-text"></i>
+                                <input type="password" id="orangeForm-pass" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+                            </div>
+                            <div class="md-form mb-4">
+                                <i class="fas fa-lock prefix grey-text"></i>
+                                <input type="password" id="orangeForm-pass" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-pass">Confirm password</label>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="submit" name="database" class="btn btn-info">Sign up</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+        </div>
     </div>
 </nav>
